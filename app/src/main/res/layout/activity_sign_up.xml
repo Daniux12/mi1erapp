@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    >
+
+    <!--Texto cuentanos sobre ti-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="415dp"
+        android:layout_height="90dp"
+        android:background="@color/damasco"
+        android:gravity="center"
+        android:text="Cuentanos sobre ti !"
+        android:textAlignment="center"
+        android:textAppearance="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtnombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <!--Ingreso del nombre que se enviara a la siguiente activity-->
+    <EditText
+        android:id="@+id/editnombre"
+        android:layout_width="225dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="14dp"
+        android:background="@color/damasco"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Ingresa tu nombre"
+        app:layout_constraintBottom_toTopOf="@+id/txtedad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints" />
+
+    <!--Registro de edad con teclado numerico-->
+    <EditText
+        android:id="@+id/editedad"
+        android:layout_width="225dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/damasco"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Ingresa tu edad"
+        app:layout_constraintBottom_toTopOf="@+id/txtcaldiarias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints" />
+
+    <!--Ingreso de calorias que consumirá con teclado numerico-->
+    <EditText
+        android:id="@+id/editcal"
+        android:layout_width="225dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/damasco"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Ingresa calorías"
+        app:layout_constraintBottom_toTopOf="@+id/txtgenero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+    <TextView
+        android:id="@+id/txtnombre"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="16dp"
+        android:text="Nombre"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editnombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtedad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Edad"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editedad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtcaldiarias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Calorías diarias"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editcal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtgenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="252dp"
+        android:text="Género"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <!--Radio boton para seleccionar si es hombre o mujer si selecciona masculino dira: bienvenido y si selecciona femenino dira: bienvenida-->
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="128dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/listo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtgenero"
+        app:layout_constraintVertical_bias="0.617">
+
+        <RadioButton
+            android:id="@+id/rdbtnfem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rdbtnmas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!--Boton listo que envia al main activity-->
+    <Button
+        android:id="@+id/listo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/piel"
+        android:text="      Listo      "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGender"
+        app:strokeColor="@color/damasco"
+        tools:ignore="HardcodedText"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
